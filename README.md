@@ -19,15 +19,12 @@
 ## make stand-alone executable 
 ### make item list / data collector
 pyinstaller --onefile --hidden-import win32timezone src/1.opcda_make_item_list.py
+
 pyinstaller --onefile --hidden-import win32timezone src/2.opcda_data_collector.py
 
-### web application
-pyinstaller --onefile --hidden-import win32timezone --hidden-import opcda_app src/opcda_main.py 
+
 
 
 ## 32-bit python check
 python -c "import sys; print(sys.maxsize > 2**32)" 
  --> if False, 32-bit
-
-# python version check
-python --version
