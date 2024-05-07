@@ -10,12 +10,6 @@
 > python -m pip install pywin32
 
 
-# to use jupyterlab
-> conda install ipykernel
-
-
-
-
 ## make stand-alone executable 
 ### make item list / data collector
 pyinstaller --onefile --hidden-import win32timezone src/1.opcda_make_item_list.py
