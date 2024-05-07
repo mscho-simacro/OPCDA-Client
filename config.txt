@@ -1,0 +1,12 @@
+[DB]
+DB_SAVE = 0
+DB_CONNECTION = mongodb://localhost:27018/ 
+DB_NAME = hdo_fcc
+DB_COLLECTION_DATA = plant_data
+DB_COLLECTION_LIST = plant_list
+ROOT_NAME = Unit1
+TAG_NAME_LENGTH = 1
+TIME_ZONE = Asia/Seoul
+
+[Collection]
+COLLECTION_INTERVAL_SECOND = 59

@@ -1,0 +1,9 @@
+[DB]
+DB_SAVE = 0
+DB_CONNECTION = mongodb://localhost:27018/ 
+DB_NAME = opc_test_db
+DB_COLLECTION = plant_data
+
+
+[Collection]
+COLLECTION_INTERVAL_SECOND = 59

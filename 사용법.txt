@@ -1,0 +1,32 @@
+
+0. 최초 실행시에 수행함
+   1) C:\Windows\SysWOW64 폴더에 gbda_aut.dll 복사
+   2) cmd 창을 관리자권한으로 실행
+   3) C:\Windows\SysWOW64 폴더로 이동
+   4) regsvr32 gbda_aut.dll 입력 -> 엔터 -> 등록되었다는 메세지 뜸  
+
+
+1. "1.opcda_make_item_list.exe" 실행 -> "Subscription" 으로 시작되는 파일 생성됨
+
+2. "Subscription" 파일 열어서 수집을 원하는 tag 만 남겨두고 나머지는 삭제 후 저장
+   ( opc server 가 여러개 구동중이면 Subscription file도 그 개수만큼 생성되니 불필요한 "Subscription" 파일은 꼭 삭제할것!!)
+
+3. config.txt 설정 
+	
+    [DB]
+    DB_SAVE = 1     (1이면 DB에 저장하겠다는 의미, 0 이면 저장하지 않음)
+    DB_CONNECTION = mongodb://localhost:27018/ 
+    DB_NAME = hdo_fcc
+    DB_COLLECTION_DATA = plant_data
+    DB_COLLECTION_LIST = plant_list
+    ROOT_NAME = Unit1   
+
+    [Collection]
+    COLLECTION_INTERVAL_SECOND = 59   (수집주기, 현재는 59초로 설정되어 있음)
+
+4. ProcessMetaverse Server.exe 실행하여 MongoDB server 구동 (이미 실행중이면 skip)
+
+5. "2. opcda_data_collector.exe" 실행 -> 오늘 날짜의 log file 생성되고, 수집 시작
+
+
+
